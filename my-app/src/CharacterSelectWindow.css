@@ -1,0 +1,21 @@
+
+.window {
+  display: block;
+  width: 75%;
+  height: inherit;
+}
+
+.windowContainer {
+  display: grid;
+  grid-template-columns: auto 24px;
+  height: 100%;
+}
+
+.formContainer {
+  display: block;
+  height: 100%;
+}
+
+.minimizeButton {
+  height: 100%;
+}
