@@ -1,15 +1,15 @@
-import './App.css';
+import './App.css'
 // import CharacterSelectWindow from './CharacterSelectWindow'
-import CharacterSelectWindow from './CharacterSelectWindow'
-
+import InventoryWindow from './InventoryWindow'
 import CharacterWindow from './CharacterWindow'
 
 
 function App() {
   return (
     <div className="App">
-      <CharacterSelectWindow />
+      {/* <CharacterSelectWindow /> */}
       
+      <InventoryWindow />
       <CharacterWindow />
     </div>
   );

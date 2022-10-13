@@ -1,0 +1,31 @@
+
+
+.inventoryWindow {
+  display: block;
+  width: 50%;
+  height: inherit;
+}
+
+.inventoryWindowContainer {
+  display: grid;
+  grid-template-columns: auto 24px;
+  height: 100%;
+}
+
+.itemsGallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border: 1px solid black;
+}
+
+.item {
+  display: grid;
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+}
+
+.minimizeButton {
+  height: 100%;
+}
