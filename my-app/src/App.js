@@ -1,5 +1,5 @@
 import './App.css'
-// import CharacterSelectWindow from './CharacterSelectWindow'
+import CharacterSelectWindow from './CharacterSelectWindow'
 import InventoryWindow from './InventoryWindow'
 import CharacterWindow from './CharacterWindow'
 
@@ -10,6 +10,7 @@ function App() {
       {/* <CharacterSelectWindow /> */}
       
       <InventoryWindow />
+      
       <CharacterWindow />
     </div>
   );

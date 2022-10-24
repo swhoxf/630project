@@ -1,31 +1,53 @@
 
 
 .inventoryWindow {
-  display: block;
-  width: 50%;
-  height: inherit;
-}
-
-.inventoryWindowContainer {
   display: grid;
+  width: 75%;
+  height: 100vh;
   grid-template-columns: auto 24px;
-  height: 100%;
 }
 
-.itemsGallery {
+.header {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
-  border: 1px solid black;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 32px;
 }
 
-.item {
-  display: grid;
-  height: 200px;
-  width: 200px;
-  border: 1px solid black;
+.menuButton {
+  height: 24px;
+  width: 24px;
 }
 
 .minimizeButton {
-  height: 100%;
+  height: 100vh;
+}
+
+.galleryContainer {
+  border: 1px solid black;
+  height: 75vh;
+  padding: 48px;
+  overflow: scroll;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.item {
+  border: 1px solid black;
+  width: 300px;
+  height: 360px;
+  display: grid;
+  grid-template-rows: auto 60px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+}
+
+.itemImageContainer {
+  border: 1px solid black;
+  background-color: gray;
 }
