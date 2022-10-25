@@ -3,11 +3,15 @@ import guy from './assets/guy.png'
 
 function CharacterWindow({ props }) {
   const top = props.top
+  function calcImageVisibility(item) {
+    if (item.name === '') return {'display': 'none'}
+    return {'display': 'block'}
+  }
   return (
     <div className='characterWindowContainer'>
       <div className='characterImageContainer'>
         <img className='characterImage' src={ guy } alt='character' />
-        <img className='topImage' src={ top.src } alt={ top.alt } />
+        <img className='topImage' src={ top.src } alt={ top.alt } style={ calcImageVisibility(top)} />
       </div>
       
       <div className="informationBox">

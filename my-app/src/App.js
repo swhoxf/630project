@@ -4,6 +4,12 @@ import InventoryWindow from './InventoryWindow'
 import CharacterWindow from './CharacterWindow'
 import React, { useState } from 'react'
 
+const emptyItem = {
+  'name': '',
+  'src': '#',
+  'alt': ''
+}
+
 const testTop = {
   'name': 'Epic Shirt',
   'src': 'https://www.nicepng.com/png/detail/9-98580_shirt-clipart-transparent-background-kids-t-shirt-clip.png', 
@@ -22,8 +28,8 @@ const testInventory = {
 }
 
 function App() {
-  const [equippedTop, setEquippedTop] = useState({'src':'#', 'alt':'top'})
-  const [equippedBottom, setEquippedBottom] = useState({'src':'#', 'alt':'bottom'})
+  const [equippedTop, setEquippedTop] = useState({'name': '', 'src':'#', 'alt':'top'})
+  const [equippedBottom, setEquippedBottom] = useState({'name': '', 'src':'#', 'alt':'bottom'})
   // const [equippedBottom, setEquippedBottom] = useState({})
   // const [equippedHat, setEquippedHat] = useState({})
   // const [equippedAccessory, setEquippedAccessory] = useState({})
@@ -33,13 +39,22 @@ function App() {
 
   function handleEquipButton(event) {
     // have the button equip the top associated with the item in the same item class as it
-    const item = event.target
-    const itemParent = item.parentElement
+    const button = event.target
+    const itemParent = button.parentElement
     const itemGParent = itemParent.parentElement
     const itemDesc = itemGParent.lastChild
     const itemName = itemDesc.firstChild.textContent
     const topToEquip = testInventory[itemName]
-    setEquippedTop(topToEquip) 
+
+    if (itemName !== equippedTop.name) {
+      setEquippedTop(topToEquip) 
+      button.textContent = 'Unequip'
+    } else {
+      setEquippedTop(emptyItem)
+      button.textContent = 'Equip'
+    }
+    
+
     // setEquippedBottom(testBottom)
   }
 
@@ -47,9 +62,12 @@ function App() {
     <div className="App">
       {/* <CharacterSelectWindow /> */}
       
-      <InventoryWindow  handleClick={ handleEquipButton } />
+      <InventoryWindow  
+        props={ {'top': equippedTop, 'bottom': equippedBottom} } // should contain all of the item slots
+        handleClick={ handleEquipButton } 
+      />
       
-      <CharacterWindow props={ {'top': equippedTop, 'bottom': equippedBottom} } />
+      <CharacterWindow props={ {'top': equippedTop, 'bottom': equippedBottom} } /> {/*should contain all of the item slots*/}
     </div>
   );
 }
