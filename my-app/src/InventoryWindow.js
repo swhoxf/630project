@@ -1,7 +1,11 @@
 import './InventoryWindow.css'
 import MenuWindow from './MenuWindow'
+import React, { useState } from 'react'
 
-function InventoryWindow() {
+function InventoryWindow({ handleClick }) {
+  
+  const [equippedTop, setEquippedTop] = useState({})
+
   return (
     <>
       <div className='inventoryWindow'>
@@ -14,10 +18,12 @@ function InventoryWindow() {
             <div className='gallery'>
               <div className='item'>
                 <div className='itemImageContainer'>
+                  <img className='itemImage' src="https://www.nicepng.com/png/detail/9-98580_shirt-clipart-transparent-background-kids-t-shirt-clip.png" alt="Shirt Clipart Transparent Background - Kids T Shirt Clip Art@nicepng.com" />
+                  
                 </div>
                 <div className='itemDescription'>
-                  lorem ipsum
-                  <button>Equip</button>
+                  Epic Shirt
+                  <button onClick={ handleClick }>Equip</button> {/* this is the callback function to fix!!! */}
                 </div>
               </div>
 

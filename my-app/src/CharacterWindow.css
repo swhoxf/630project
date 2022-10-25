@@ -6,15 +6,10 @@
 
 .characterImageContainer {
   display: block;
-  max-width: 500px;
-  max-height: 500px;
   height: 500px;
-}
-
-.dummyCharacterImage {
+  width: 300px;
   background-color: gray;
-  height: 100%;
-  width: auto;
+  position: relative;
 }
 
 .informationBox {
@@ -22,4 +17,23 @@
   display: block;
   width: 300px;
   margin-top: 24px;
+}
+
+.characterImage {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.topImage {
+  position: absolute;
+  top: 100px;
+  left: 75px;
+  height: 50%;
+  width: 50%;
+  object-fit: contain;
+  display: none;
 }
