@@ -1,10 +1,8 @@
 import './InventoryWindow.css'
-import MenuWindow from './MenuWindow'
-import React, { useState } from 'react'
+// import MenuWindow from './MenuWindow'
+import React from 'react'
 
 function InventoryWindow({ handleClick }) {
-  
-  const [equippedTop, setEquippedTop] = useState({})
 
   return (
     <>
@@ -22,8 +20,8 @@ function InventoryWindow({ handleClick }) {
                   
                 </div>
                 <div className='itemDescription'>
-                  Epic Shirt
-                  <button onClick={ handleClick }>Equip</button> {/* this is the callback function to fix!!! */}
+                  <div className='itemName'>Epic Shirt</div>
+                  <button onClick={ handleClick }>Equip</button> 
                 </div>
               </div>
 

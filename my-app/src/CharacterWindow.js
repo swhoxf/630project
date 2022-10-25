@@ -2,13 +2,12 @@ import './CharacterWindow.css'
 import guy from './assets/guy.png'
 
 function CharacterWindow({ props }) {
-  const top = props.equippedTop
+  const top = props.top
   return (
     <div className='characterWindowContainer'>
       <div className='characterImageContainer'>
         <img className='characterImage' src={ guy } alt='character' />
-        {/* <img className='topImage' src={ top.src } alt='top' /> */}
-        <img className='topImage' src='#' alt='top' />
+        <img className='topImage' src={ top.src } alt={ top.alt } />
       </div>
       
       <div className="informationBox">
