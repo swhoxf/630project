@@ -7,9 +7,10 @@ function CharacterSelectWindow() {
       <div className="windowContainer" >
         
         <div className="formContainer" >
-          <h1>Larval Stage</h1>
+          <div className='header'>
+            <h1>Larval Stage</h1>
+          </div>
   
-          <hr />
           <h4>Character Profile</h4>
           <form>
             <label>
@@ -62,7 +63,7 @@ function CharacterSelectWindow() {
             <br />
   
             
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Start Shopping" />
           </form>
         </div>
         

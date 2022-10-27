@@ -13,6 +13,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 8px 32px;
+  border-bottom: 1px solid black;
 }
 
 .menuButton {
@@ -25,7 +26,6 @@
 }
 
 .galleryContainer {
-  border: 1px solid black;
   height: 75vh;
   padding: 48px;
   overflow: scroll;

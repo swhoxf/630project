@@ -1,5 +1,5 @@
 import './App.css'
-// import CharacterSelectWindow from './CharacterSelectWindow'
+import CharacterSelectWindow from './CharacterSelectWindow'
 import InventoryWindow from './InventoryWindow'
 import CharacterWindow from './CharacterWindow'
 import React, { useState } from 'react'
@@ -65,7 +65,7 @@ function App() {
       <InventoryWindow  
         props={ {'top': equippedTop, 'bottom': equippedBottom} } // should contain all of the item slots
         handleClick={ handleEquipButton } 
-      />
+      /> 
       
       <CharacterWindow props={ {'top': equippedTop, 'bottom': equippedBottom} } /> {/*should contain all of the item slots*/}
     </div>
