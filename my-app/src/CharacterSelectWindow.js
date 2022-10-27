@@ -1,7 +1,8 @@
 import './CharacterSelectWindow.css'
 
 
-function CharacterSelectWindow() {
+function CharacterSelectWindow( { handleShoppingButton } ) {
+
   return (
     <div className='window'>
       <div className="windowContainer" >
@@ -63,7 +64,7 @@ function CharacterSelectWindow() {
             <br />
   
             
-            <input type="submit" value="Start Shopping" />
+            <input type="submit" value="Start Shopping" onClick={ handleShoppingButton }/>
           </form>
         </div>
         

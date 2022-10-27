@@ -28,6 +28,9 @@ const testInventory = {
 }
 
 function App() {
+  // state of which components are rendered
+  const [mainWindow, setMainWindow] = useState('larval')
+  // state of the user's equipped items
   const [equippedTop, setEquippedTop] = useState({'name': '', 'src':'#', 'alt':'top'})
   const [equippedBottom, setEquippedBottom] = useState({'name': '', 'src':'#', 'alt':'bottom'})
   // const [equippedBottom, setEquippedBottom] = useState({})
@@ -37,6 +40,8 @@ function App() {
   // const [equippedGloves, setEquippedGloves] = useState({})
   // const [equippedScarf, setEquippedScarf] = useState({})
 
+  // pass this function to the inventory window
+  // handles when the user clicks the equip/unequip button for an item
   function handleEquipButton(event) {
     // have the button equip the top associated with the item in the same item class as it
     const button = event.target
@@ -45,7 +50,7 @@ function App() {
     const itemDesc = itemGParent.lastChild
     const itemName = itemDesc.firstChild.textContent
     const topToEquip = testInventory[itemName]
-
+    // button toggles between equip and unequip
     if (itemName !== equippedTop.name) {
       setEquippedTop(topToEquip) 
       button.textContent = 'Unequip'
@@ -53,20 +58,36 @@ function App() {
       setEquippedTop(emptyItem)
       button.textContent = 'Equip'
     }
-    
-
     // setEquippedBottom(testBottom)
+  }
+
+  // pass this function to the larval window, 
+  // clicking shopping button brings user to inventory window
+  function handleShoppingButton(event) {
+    event.preventDefault()
+    setMainWindow('shoppe')
+  }
+
+  // pass this function to the inventory window to pass to the menu,
+  // clicking on the link to the larval stage in the menu options 
+  // swaps out the inventory window for the character select window
+  function handleLarvalButton() {
+    setMainWindow('larval')
   }
 
   return (
     <div className="App">
-      {/* <CharacterSelectWindow /> */}
+      {/* display the first window for character selection */}
+      { mainWindow === 'larval' && <CharacterSelectWindow handleShoppingButton={ handleShoppingButton } /> }
       
-      <InventoryWindow  
+      {/* display the window with the inventory */}
+      { mainWindow === 'shoppe' && <InventoryWindow  
         props={ {'top': equippedTop, 'bottom': equippedBottom} } // should contain all of the item slots
-        handleClick={ handleEquipButton } 
-      /> 
+        handleEquipButton={ handleEquipButton } 
+        handleLarvalButton={ handleLarvalButton }
+      /> }
       
+      {/* display the character window at all times */}
       <CharacterWindow props={ {'top': equippedTop, 'bottom': equippedBottom} } /> {/*should contain all of the item slots*/}
     </div>
   );

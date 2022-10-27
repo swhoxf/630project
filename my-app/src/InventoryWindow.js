@@ -2,13 +2,12 @@ import './InventoryWindow.css'
 import MenuWindow from './MenuWindow'
 import React, { useState } from 'react'
 
-function InventoryWindow({ handleClick }) {
+function InventoryWindow({ handleEquipButton, handleLarvalButton }) {
 
   const [displayMenu, setDisplayMenu] = useState(false)
 
   function handleMenuButton(event) {
     setDisplayMenu(!displayMenu)
-    console.log('hello')
   }
 
   return (
@@ -28,7 +27,7 @@ function InventoryWindow({ handleClick }) {
                 </div>
                 <div className='itemDescription'>
                   <div className='itemName'>Epic Shirt</div>
-                  <button onClick={ handleClick }>Equip</button> 
+                  <button onClick={ handleEquipButton }>Equip</button> 
                 </div>
               </div>
 
@@ -45,7 +44,7 @@ function InventoryWindow({ handleClick }) {
         <button className='minimizeButton'>&#8249;</button>
       </div>
 
-      { displayMenu && <MenuWindow handleClick={ handleMenuButton }/> }
+      { displayMenu && <MenuWindow handleMenuButton={ handleMenuButton } handleLarvalButton={ handleLarvalButton }/> }
     </>
   );
 }

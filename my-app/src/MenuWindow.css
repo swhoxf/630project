@@ -8,3 +8,8 @@
   right: 25%;
   background-color: white;
 }
+
+.menuLink:hover {
+  background-color: gray;
+  cursor: pointer;
+}
