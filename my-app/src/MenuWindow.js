@@ -6,15 +6,25 @@ function MenuWindow( { props, handleMenuButton, handleLarvalButton } ) {
 
   // function that toggles the bool corresponding to the display ('block' | 'none') of the menuWindow
   function calcMenuDisplay(showMenu) {
-    if (showMenu) return {'display': 'block'}
-    return {'display': 'none'}
+    if (showMenu) return (
+      {//'display': 'block', 
+      'transform': 'rotate3d(0, 1, 0, 0deg)', 
+      'transition': 'transform 250ms ease-in-out'
+      }
+      )
+    return (
+      {//'display': 'none', 
+      'transform': 'rotate3d(0, 1, 0, -90deg)', 
+      'transition': 'transform 250ms ease-in-out'
+      }
+      )
   }
 
   return (
     // calcMenuDisplay is a function that toggles the bool corresponding to the display ('block' | 'none') of the menuWindow
     <div className='menuWindow' style={ calcMenuDisplay(displayMenu)}>
       { /* handleMenuButton is a function that toggles boolean corresponding to display of menuWindow between block and none */}
-      <button className='menubutton' onClick={ handleMenuButton }>=</button>
+      <button className='custom-btn btn-1 menubutton' onClick={ handleMenuButton }>=</button>
       <div>
         <div className='menuLink'>
           <h3>Ye Olde Shoppe</h3>

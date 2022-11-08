@@ -4,8 +4,10 @@
   display: block;
   width: 50%;
   height: inherit;
-  background-image: url('./assets/grunge-vintage-old-paper-background.jpg');
-  /* <a href="https://www.freepik.com/free-photo/grunge-vintage-old-paper-background_1273370.htm#query=old%20paper&position=4&from_view=keyword">Image by aopsan</a> on Freepik */
+  background-image: url('./assets/wooden-textured-background.jpg');
+  color: white;
+  backdrop-filter: brightness(25%);
+  /* <a href="https://www.freepik.com/free-photo/wooden-textured-background_2768392.htm#query=wooden%20texture&position=3&from_view=search&track=sph">Image by rawpixel.com</a> on Freepik */
 }
 
 .windowContainer {
@@ -17,8 +19,12 @@
 .formContainer {
   display: block;
   height: 100%;
+  background-image: url('./assets/grunge-vintage-old-paper-background.jpg');
+  color: black;
+  /* <a href="https://www.freepik.com/free-photo/grunge-vintage-old-paper-background_1273370.htm#query=old%20paper&position=4&from_view=keyword">Image by aopsan</a> on Freepik */
 }
 
 .minimizeButton {
   height: 100%;
+  padding: 8px;
 }

@@ -7,12 +7,16 @@
   position: absolute;
   right: 25%;
   background-color: white;
-  display: none;
+  /* display: none; */
+  transform-origin: top right;
+  transform: rotate3d(0, 1, 0, 90deg);
+  transition: transform 250ms ease-in-out;
   background-image: url('./assets/grunge-vintage-old-paper-background.jpg');
   /* <a href="https://www.freepik.com/free-photo/grunge-vintage-old-paper-background_1273370.htm#query=old%20paper&position=4&from_view=keyword">Image by aopsan</a> on Freepik */
 }
 
 .menuLink:hover {
-  background-color: gray;
+  text-shadow: 0px 0px 8px rgb(81, 45, 45);
+  color: white;
   cursor: pointer;
 }

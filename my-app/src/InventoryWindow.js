@@ -19,7 +19,7 @@ function InventoryWindow({ handleEquipButton, handleLarvalButton }) {
           <div className='header'>
             <h1>Ye Olde Shoppe</h1>
             {/* handleMenuButton toggles a bool that corresponds to display of menuWindow */}
-            <button className='menuButton' onClick={ handleMenuButton }>=</button>
+            <button className='custom-btn btn-1 menuButton' onClick={ handleMenuButton }>=</button>
           </div>
           <div className='galleryContainer'>
             <div className='gallery'>
@@ -32,7 +32,7 @@ function InventoryWindow({ handleEquipButton, handleLarvalButton }) {
                   <div className='itemName'>Epic Shirt</div>
                   {/* handleEquipButton is a function that changes href of item slot in CharacterWindow and toggles display between block and none; 
                       displays image of associated item in CharacterWindow */}
-                  <button onClick={ handleEquipButton }>Equip</button> 
+                  <button className='custom-btn btn-1 equip-button' onClick={ handleEquipButton }>Equip</button> 
                 </div>
               </div>
 
@@ -43,7 +43,7 @@ function InventoryWindow({ handleEquipButton, handleLarvalButton }) {
           
         </div>
         
-        <button className='minimizeButton'>&#8249;</button>
+        <button className='custom-btn btn-1 minimizeButton'>&#8249;</button>
       </div>
       {/* handleMenuButton is a function that toggles a bool that corresponds to display of menuWindow 
           displayMenu is the bool that corresponds to the display of menuWindow

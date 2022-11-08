@@ -14,24 +14,13 @@
   
 }
 
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 32px;
-  background-image: url('./assets/wooden-textured-background.jpg');
-  color: white;
-  /* <a href="https://www.freepik.com/free-photo/wooden-textured-background_2768392.htm#query=wooden%20texture&position=3&from_view=search&track=sph">Image by rawpixel.com</a> on Freepik */
-}
-
 .menuButton {
-  height: 24px;
-  width: 24px;
+  padding: 8px 16px;
 }
 
 .minimizeButton {
   height: 100vh;
+  padding: 8px;
 }
 
 .galleryContainer {
@@ -71,4 +60,9 @@
   width: 300px;
   height: 300px;
   object-fit: contain;
+}
+
+.equip-button {
+  font-size: 12px;
+  padding: 8px 16px;
 }

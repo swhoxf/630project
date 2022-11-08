@@ -64,13 +64,13 @@ function CharacterSelectWindow( { handleShoppingButton } ) {
             <br />
   
             {/* handleShoppingButton function changes main window component mounted to InventoryWindow */}
-            <input type="submit" value="Start Shopping" onClick={ handleShoppingButton }/>
+            <input className='custom-btn btn-1' type="submit" value="Start Shopping" onClick={ handleShoppingButton }/>
           </form>
         </div>
         
   
         <div>
-          <button className="minimizeButton">&#8249;</button>
+          <button className="custom-btn btn-1 minimizeButton">&#8249;</button>
         </div>
       </div>
     </div>
