@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/630project/static/css/main.2f4c9248.css",
-    "main.js": "/630project/static/js/main.466e6b06.js",
+    "main.css": "/630project/static/css/main.705cb2c8.css",
+    "main.js": "/630project/static/js/main.c3dee386.js",
     "static/js/787.28cb0dcd.chunk.js": "/630project/static/js/787.28cb0dcd.chunk.js",
+    "static/media/wooden-textured-background.jpg": "/630project/static/media/wooden-textured-background.9f50b21ad02ff4b31fe6.jpg",
+    "static/media/texture-background.jpg": "/630project/static/media/texture-background.a447ae4c6a760e4a6738.jpg",
+    "static/media/grunge-vintage-old-paper-background.jpg": "/630project/static/media/grunge-vintage-old-paper-background.3d7faa2463916e4fc3c6.jpg",
     "static/media/guy.png": "/630project/static/media/guy.908748d2cca3b90ae0e6.png",
     "index.html": "/630project/index.html",
-    "main.2f4c9248.css.map": "/630project/static/css/main.2f4c9248.css.map",
-    "main.466e6b06.js.map": "/630project/static/js/main.466e6b06.js.map",
+    "main.705cb2c8.css.map": "/630project/static/css/main.705cb2c8.css.map",
+    "main.c3dee386.js.map": "/630project/static/js/main.c3dee386.js.map",
     "787.28cb0dcd.chunk.js.map": "/630project/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f4c9248.css",
-    "static/js/main.466e6b06.js"
+    "static/css/main.705cb2c8.css",
+    "static/js/main.c3dee386.js"
   ]
 }
