@@ -63,7 +63,7 @@ function CharacterSelectWindow( { handleShoppingButton } ) {
             </label>
             <br />
   
-            
+            {/* handleShoppingButton function changes main window component mounted to InventoryWindow */}
             <input type="submit" value="Start Shopping" onClick={ handleShoppingButton }/>
           </form>
         </div>

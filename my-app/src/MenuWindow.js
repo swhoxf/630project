@@ -1,8 +1,19 @@
 import './MenuWindow.css'
 
-function MenuWindow( { handleMenuButton, handleLarvalButton } ) {
+function MenuWindow( { props, handleMenuButton, handleLarvalButton } ) {
+  // boolean that corresponds to the display ('block' | 'none') of the menuWindow
+  const displayMenu = props
+
+  // function that toggles the bool corresponding to the display ('block' | 'none') of the menuWindow
+  function calcMenuDisplay(showMenu) {
+    if (showMenu) return {'display': 'block'}
+    return {'display': 'none'}
+  }
+
   return (
-    <div className='menuWindow'>
+    // calcMenuDisplay is a function that toggles the bool corresponding to the display ('block' | 'none') of the menuWindow
+    <div className='menuWindow' style={ calcMenuDisplay(displayMenu)}>
+      { /* handleMenuButton is a function that toggles boolean corresponding to display of menuWindow between block and none */}
       <button className='menubutton' onClick={ handleMenuButton }>=</button>
       <div>
         <div className='menuLink'>
@@ -26,7 +37,7 @@ function MenuWindow( { handleMenuButton, handleLarvalButton } ) {
         <label>Bottoms</label>
       </div>
 
-      
+      {/* handleLarvalButton is a function that changes mainWindow state to 'larval', swaps main window component to CharacterSelectWindow */}
       <div className='menuLink' onClick={ handleLarvalButton } >
         <h3>Larval Stage</h3>
       </div>

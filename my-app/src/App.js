@@ -12,7 +12,7 @@ const emptyItem = {
 
 const testTop = {
   'name': 'Epic Shirt',
-  'src': 'https://www.nicepng.com/png/detail/9-98580_shirt-clipart-transparent-background-kids-t-shirt-clip.png', 
+  'src': 'https://www.nicepng.com/png/detail/9-98580_shirt-clipart-transparent-background-kids-t-shirt-clip.png',
   'alt': 'Epic Shirt'
 }
 
@@ -28,12 +28,11 @@ const testInventory = {
 }
 
 function App() {
-  // state of which components are rendered
+  // state of which mian window components ('larval' | 'shoppe') are rendered
   const [mainWindow, setMainWindow] = useState('larval')
   // state of the user's equipped items
   const [equippedTop, setEquippedTop] = useState({'name': '', 'src':'#', 'alt':'top'})
   const [equippedBottom, setEquippedBottom] = useState({'name': '', 'src':'#', 'alt':'bottom'})
-  // const [equippedBottom, setEquippedBottom] = useState({})
   // const [equippedHat, setEquippedHat] = useState({})
   // const [equippedAccessory, setEquippedAccessory] = useState({})
   // const [equippedShoes, setEquippedShoes] = useState({})
@@ -77,7 +76,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* display the first window for character selection */}
+      {/* display the initial window for character selection */}
       { mainWindow === 'larval' && <CharacterSelectWindow handleShoppingButton={ handleShoppingButton } /> }
       
       {/* display the window with the inventory */}

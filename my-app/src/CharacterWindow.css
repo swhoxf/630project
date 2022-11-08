@@ -1,4 +1,5 @@
 
+
 .characterWindowContainer {
   padding-top: 24px;
   padding-left: 48px;
@@ -8,7 +9,7 @@
   display: block;
   height: 500px;
   width: 300px;
-  background-color: gray;
+  /* background-color: gray; */
   position: relative;
 }
 
@@ -17,6 +18,9 @@
   display: block;
   width: 300px;
   margin-top: 24px;
+  background-image: url('./assets/wooden-textured-background.jpg');
+  color: white;
+  /* <a href="https://www.freepik.com/free-photo/wooden-textured-background_2768392.htm#query=wooden%20texture&position=3&from_view=search&track=sph">Image by rawpixel.com</a> on Freepik */
 }
 
 .characterImage {

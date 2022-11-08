@@ -1,8 +1,11 @@
 
+
 .window {
   display: block;
   width: 50%;
   height: inherit;
+  background-image: url('./assets/grunge-vintage-old-paper-background.jpg');
+  /* <a href="https://www.freepik.com/free-photo/grunge-vintage-old-paper-background_1273370.htm#query=old%20paper&position=4&from_view=keyword">Image by aopsan</a> on Freepik */
 }
 
 .windowContainer {

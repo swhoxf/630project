@@ -1,6 +1,11 @@
+* {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 .App {
   text-align: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  background: black;
 }
