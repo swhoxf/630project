@@ -325,9 +325,11 @@ function CharacterSelectWindow( { handleShoppingButton } ) {
               {/* Submit data and move on to equipment... or reset. */}
               <table>
                 <tr>
-                  <td><button type="submit" onClick="finalizeChar()">Finalize Character!</button></td>
+                  <td><button type="submit" onClick="finalizeChar()">Finalize Character</button></td>
                   <td></td>
                   <td><button type="reset" onClick="reset()">Reset Character</button></td>
+                  <td></td>
+                  <td><button onClick={handleShoppingButton}>Start Shopping</button></td>
                 </tr>
               </table>
             </form>
