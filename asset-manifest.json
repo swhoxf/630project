@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/630project/static/css/main.4bf9170a.css",
-    "main.js": "/630project/static/js/main.20a71926.js",
+    "main.css": "/630project/static/css/main.cce088c0.css",
+    "main.js": "/630project/static/js/main.a2e6f7ad.js",
     "static/js/787.28cb0dcd.chunk.js": "/630project/static/js/787.28cb0dcd.chunk.js",
     "static/media/wooden-textured-background.jpg": "/630project/static/media/wooden-textured-background.9f50b21ad02ff4b31fe6.jpg",
     "static/media/texture-background.jpg": "/630project/static/media/texture-background.a447ae4c6a760e4a6738.jpg",
     "static/media/grunge-vintage-old-paper-background.jpg": "/630project/static/media/grunge-vintage-old-paper-background.3d7faa2463916e4fc3c6.jpg",
     "static/media/ronaldo-de-oliveira-ZjRVXOHZGyI-unsplash.jpg": "/630project/static/media/ronaldo-de-oliveira-ZjRVXOHZGyI-unsplash.2b96b852d6822c44f6e3.jpg",
-    "static/media/guy.png": "/630project/static/media/guy.908748d2cca3b90ae0e6.png",
+    "static/media/mannequin.svg": "/630project/static/media/mannequin.1269bf43b120388fbe151f32656f86da.svg",
     "index.html": "/630project/index.html",
-    "main.4bf9170a.css.map": "/630project/static/css/main.4bf9170a.css.map",
-    "main.20a71926.js.map": "/630project/static/js/main.20a71926.js.map",
+    "main.cce088c0.css.map": "/630project/static/css/main.cce088c0.css.map",
+    "main.a2e6f7ad.js.map": "/630project/static/js/main.a2e6f7ad.js.map",
     "787.28cb0dcd.chunk.js.map": "/630project/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4bf9170a.css",
-    "static/js/main.20a71926.js"
+    "static/css/main.cce088c0.css",
+    "static/js/main.a2e6f7ad.js"
   ]
 }
