@@ -14,7 +14,7 @@ function MenuWindow( { props, handleMenuButton, handleLarvalButton } ) {
       )
     return (
       {//'display': 'none', 
-      'transform': 'rotate3d(0, 1, 0, -90deg)', 
+      'transform': 'rotate3d(1, 1, 0, -90deg)', 
       'transition': 'transform 250ms ease-in-out'
       }
       )

@@ -64,3 +64,12 @@ background-image: -webkit-repeating-linear-gradient(left, rgba(255, 238, 170, 0)
    #fea 100%);
  
 }
+
+@keyframes swipe-up {
+  0%  {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

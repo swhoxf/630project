@@ -1,5 +1,5 @@
 import './CharacterWindow.css'
-import guy from './assets/guy.png'
+import guy from './assets/mannequin.svg'
 
 function CharacterWindow({ props }) {
   // props is a json storing the state of equipped items 
