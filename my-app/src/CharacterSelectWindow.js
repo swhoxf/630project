@@ -329,7 +329,7 @@ function CharacterSelectWindow( { handleShoppingButton } ) {
                   <td></td>
                   <td><button type="reset" onClick="reset()">Reset Character</button></td>
                   <td></td>
-                  <td><button onClick={handleShoppingButton}>Start Shopping</button></td>
+                  <td><button onClick={ handleShoppingButton }>Start Shopping</button></td>
                 </tr>
               </table>
             </form>
