@@ -1,7 +1,7 @@
 import './CharacterSelectWindow.css'
 
 
-function CharacterSelectWindow( { handleShoppingButton, handleCharStats } ) {
+function CharacterSelectWindow( { handleShoppingButton, handleCharStats, handleCharName, handleCharPronouns } ) {
   const character = {
     "Name": "",
     "Pronouns": "",
@@ -58,6 +58,12 @@ function CharacterSelectWindow( { handleShoppingButton, handleCharStats } ) {
     //   "Char Stats: " + charStats + "\n" + 
     //   "Final Stats: " + finalStats)
     handleCharStats(finalStats)
+    handleCharName(charName)
+    handleCharPronouns(charPronouns)
+  }
+
+  function handleReset() {
+    handleCharStats([0, 0, 0, 0, 0, 0, 0])
   }
 
   return (
@@ -98,7 +104,7 @@ function CharacterSelectWindow( { handleShoppingButton, handleCharStats } ) {
                     <datalist id="basicPronouns">
                       <option>he/him/his</option>
                       <option>she/her/hers</option>
-                      <option>they/them/their</option>
+                      <option>they/them/theirs</option>
                     </datalist>
                   </tr>
                   
@@ -326,11 +332,11 @@ function CharacterSelectWindow( { handleShoppingButton, handleCharStats } ) {
               {/* Submit data and move on to equipment... or reset. */}
               <table>
                 <tr>
-                  <td><button type="submit" onClick="finalizeChar()">Finalize Character</button></td>
+                  <td><button className="custom-btn btn-1" type="submit" onClick="finalizeChar()">Finalize Character</button></td>
                   <td></td>
-                  <td><button type="reset" onClick="reset()">Reset Character</button></td>
+                  <td><button className="custom-btn btn-1" type="reset" onClick={ handleReset }>Reset Character</button></td>
                   <td></td>
-                  <td><button onClick={ handleShoppingButton }>Start Shopping</button></td>
+                  <td><button className="custom-btn btn-1" onClick={ handleShoppingButton }>Start Shopping</button></td>
                 </tr>
               </table>
             </form>
@@ -340,9 +346,7 @@ function CharacterSelectWindow( { handleShoppingButton, handleCharStats } ) {
         </div>
         
   
-        <div>
-          <button className="custom-btn btn-1 minimizeButton">&#8249;</button>
-        </div>
+        
       </div>
     </div>
     

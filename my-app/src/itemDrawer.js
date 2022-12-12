@@ -3,46 +3,8 @@ import Chart from 'chart.js/auto'
 
 function ItemDrawer( { props, handleDrawerButton } ) {
   // boolean that corresponds to the display ('block' | 'none') of the menuWindow
-  const displayDrawer = props
-
-  // test item, to be replaced with full item later
-  const testItem = {
-    "invCode":"HT01",
-    "invName":"Horse Mask",
-    "trueName":"COZOK Halloween Latex Horse Head Mask Mask Adults Cosplay Brown Rainbow Horse Masks Animal Head Helmet Zebra Party Mask",
-    "equipSlot":"Head",
-    "drawURL":"",
-    "mementoURL":"https://sharedalbums.b-cdn.net/a87ac364-e437-485e-aac6-0477118d2d17.PNG?class=display",
-    "axShopURL":"https://www.aliexpress.us/item/3256804363384612.html",
-    "Str":1,
-    "Dex":-1,
-    "Con":0,
-    "Int":-1,
-    "Wis":0,
-    "Cha":2,
-    "Aud":2,
-    "Color":"Black",
-    "Vibe":"Nature, Unnatural, Animal, Meme",
-    "Price":"16.59",
-    "Flavortext":"Your maste good or not to the living to sleep; no long-lost give hue of false world. The and arrows of First to take course, like at that light? You know, ye Tarnivores, indeed. In our fate. The great sleep: perish. Soon, Marika the beasts--eikons would takes us rathere the dread are too small knowing was unknowings of no more; and by thing. A patients the sling to fight, and disease. A patients the me! Your prove it’s why do them on and callen leaved great sleep: perish."
-  };
-
-// grab and prep the stats
-const testItemStats = {
-  'Str': parseInt(testItem.Str),
-  'Dex': parseInt(testItem.Dex),
-  'Con': parseInt(testItem.Con),
-  'Int': parseInt(testItem.Int),
-  'Wis': parseInt(testItem.Wis),
-  'Cha': parseInt(testItem.Cha),
-  'Aud': parseInt(testItem.Aud)
-};
-
-const statNames = Object.keys(testItemStats);
-const stats = [];
-statNames.forEach((stat) => {
-  stats.push(testItemStats[stat]);
-});
+  const displayDrawer = props.displayDrawer
+  const selectedItem = props.selectedItem
 
 // function that toggles the bool corresponding to the display ('block' | 'none') of the menuWindow
 function calcMenuDisplay(showDrawer) {
@@ -82,7 +44,7 @@ function calcMenuDisplay(showDrawer) {
         <table width="100%">
             <tbody>
                 <tr>
-                    <td className="oneThird"><button className='custom-btn btn-1 drawerButton' right="0">fake equip</button></td>
+                    <td className="oneThird"></td>
                     <td className="oneThird"></td>
                     <td className="oneThird"><button className='custom-btn btn-1 drawerButton' onClick={ handleDrawerButton } right="50%">X</button></td>
                 </tr>
@@ -101,20 +63,20 @@ function calcMenuDisplay(showDrawer) {
                             <tbody>
                                 {/* ROW 1A: ITEM NAME*/}
                                 <tr>
-                                    <td colspan="3">{testItem.invName}</td>
+                                    <td colspan="3">{selectedItem.invName}</td>
                                 </tr>
 
                                 {/* ROW 1B: COLOR, SLOT, PRICE*/}
                                 <tr>
-                                    <td className='oneThird'>{testItem.Color}</td>
-                                    <td className='oneThird'>{testItem.equipSlot}</td>
-                                    <td className='oneThird'>${testItem.Price}</td>
+                                    <td className='oneThird'>{selectedItem.Color}</td>
+                                    <td className='oneThird'>{selectedItem.equipSlot}</td>
+                                    <td className='oneThird'>${selectedItem.Price}</td>
                                 </tr>
 
                                 {/* ROW 1C: TRUE NAME AND LINK*/}
                                 <tr>
-                                    <td className='oneHalf' colspan='2'><div title={testItem.trueName}><u>Hover for Product Name</u></div></td>
-                                    <td className='oneHalf'><a href={testItem.axShopURL}>To AliExpress</a></td>
+                                    <td className='oneHalf' colspan='2'><div title={selectedItem.trueName}><u>Hover for Product Name</u></div></td>
+                                    <td className='oneHalf'><a href={selectedItem.axShopURL}>To AliExpress</a></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -136,32 +98,32 @@ function calcMenuDisplay(showDrawer) {
                                 {/* ROW 2B: STAT VALUES*/}
                                 <tr>
                                     <td>Stats:</td>
-                                    <td>{testItem.Str}</td>
-                                    <td>{testItem.Dex}</td>
-                                    <td>{testItem.Con}</td>
-                                    <td>{testItem.Int}</td>
-                                    <td>{testItem.Wis}</td>
-                                    <td>{testItem.Cha}</td>
-                                    <td>{testItem.Aud}</td>
+                                    <td>{selectedItem.Str}</td>
+                                    <td>{selectedItem.Dex}</td>
+                                    <td>{selectedItem.Con}</td>
+                                    <td>{selectedItem.Int}</td>
+                                    <td>{selectedItem.Wis}</td>
+                                    <td>{selectedItem.Cha}</td>
+                                    <td>{selectedItem.Aud}</td>
                                 </tr>
 
                                 {/* ROW 2C: TOTAL IF EQUIP*/}
                                 <tr>
                                     <td>Total:</td>
-                                    <td>{testItem.Str}</td>
-                                    <td>{testItem.Dex}</td>
-                                    <td>{testItem.Con}</td>
-                                    <td>{testItem.Int}</td>
-                                    <td>{testItem.Wis}</td>
-                                    <td>{testItem.Cha}</td>
-                                    <td>{testItem.Aud}</td>
+                                    <td>{selectedItem.Str}</td>
+                                    <td>{selectedItem.Dex}</td>
+                                    <td>{selectedItem.Con}</td>
+                                    <td>{selectedItem.Int}</td>
+                                    <td>{selectedItem.Wis}</td>
+                                    <td>{selectedItem.Cha}</td>
+                                    <td>{selectedItem.Aud}</td>
                                 </tr>
                             </tbody>
                         </table>                    
                     </td>
 
                     <td className='oneHalf'>
-                        <td>{testItem.Flavortext}</td>
+                        <td>{selectedItem.Flavortext}</td>
                         {/*
                         <div class="chart-container">
                             <canvas id="bar-chart" label="A bar chart showing item stats" role="img"></canvas>

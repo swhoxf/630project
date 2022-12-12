@@ -2,8 +2,8 @@
 
 .window {
   display: block;
-  width: 50%;
-  height: inherit;
+  width: 75%;
+  height: 100vh;
   background-image: url('./assets/wooden-textured-background.jpg');
   color: white;
   backdrop-filter: brightness(25%);
@@ -22,7 +22,7 @@
 }
 
 form {
-  height: 75%;
+  height: 100%;
   box-shadow: 0px 0px 8px black;
   animation-name: swipe-up;
   animation-duration: 1s;

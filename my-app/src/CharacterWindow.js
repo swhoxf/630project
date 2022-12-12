@@ -11,6 +11,8 @@ function CharacterWindow({ props }) {
   const hands = props.hands
   const accessories = props.accessories
   const characterStats = props.characterStats
+  const characterName = props.characterName
+  const characterPronouns = props.characterPronouns
 
   // function that toggles visibility of equipped item in CharacterWindow 
   function calcImageVisibility(item) {
@@ -35,8 +37,8 @@ function CharacterWindow({ props }) {
       </div>
       
       <div className="informationBox">
-        <h2 className='characterName'>Link Zelda</h2>
-        <h3 className='pronouns'>he/him</h3>
+        <h2 className='characterName'>{ characterName }</h2>
+        <h3 className='pronouns'>{ characterPronouns }</h3>
         <table width="100%">
           <tbody>
               {/* ROW 2A: STAT NAMES*/}

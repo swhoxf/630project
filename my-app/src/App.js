@@ -21,7 +21,17 @@ function App() {
   const [equippedShoes, setEquippedShoes] = useState(emptyItem)
   const [equippedHands, setEquippedHands] = useState(emptyItem)
   // state of user's stats
-  const [characterStats, setCharacterStats] = useState({})
+  const [characterStats, setCharacterStats] = useState({
+    'strength': 0, 
+    'dexterity': 0, 
+    'constitution': 0, 
+    'intelligence': 0, 
+    'wisdom': 0, 
+    'charisma': 0, 
+    'audacity': 0
+  })
+  const [characterName, setCharacterName] = useState('')
+  const [characterPronouns, setCharacterPronouns] = useState('')
 
   // pass this function to the inventory window
   // handles when the user clicks the equip/unequip button for an item
@@ -157,10 +167,22 @@ function App() {
     })
   }
 
+  function handleCharName(name) {
+    setCharacterName(name)
+  }
+
+  function handleCharPronouns(pronouns) {
+    setCharacterPronouns(pronouns)
+  }
+
   return (
     <div className="App">
       {/* display the initial window for character selection */}
-      { mainWindow === 'larval' && <CharacterSelectWindow handleShoppingButton={ handleShoppingButton } handleCharStats = { initCharStats }/> }
+      { mainWindow === 'larval' && <CharacterSelectWindow 
+        handleShoppingButton={ handleShoppingButton } 
+        handleCharStats = { initCharStats }
+        handleCharName = { handleCharName }
+        handleCharPronouns = { handleCharPronouns } /> }
       
       {/* display the window with the inventory */}
       { mainWindow === 'shoppe' && <InventoryWindow  
@@ -177,7 +199,9 @@ function App() {
         'hands': equippedHands, 
         'shoes': equippedShoes, 
         'accessories': equippedAccessories, 
-        'characterStats': characterStats
+        'characterStats': characterStats, 
+        'characterName': characterName, 
+        'characterPronouns': characterPronouns
       } } /> {/*should contain all of the item slots*/}
     </div>
   );
