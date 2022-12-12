@@ -3,41 +3,23 @@ import CharacterSelectWindow from './CharacterSelectWindow'
 import InventoryWindow from './InventoryWindow'
 import CharacterWindow from './CharacterWindow'
 import React, { useState } from 'react'
+import Inventory from './assets/inventory.json'
 
 const emptyItem = {
-  'name': '',
-  'src': '#',
-  'alt': ''
-}
-
-const testTop = {
-  'name': 'Epic Shirt',
-  'src': 'https://www.nicepng.com/png/detail/9-98580_shirt-clipart-transparent-background-kids-t-shirt-clip.png',
-  'alt': 'Epic Shirt'
-}
-
-const testBottom = {
-  'name': 'Epic Pants',
-  'src': 'https://www.nicepng.com/png/detail/9-98580_shirt-clipart-transparent-background-kids-t-shirt-clip.png', 
-  'alt': 'Epic Pants'
-}
-
-const testInventory = {
-  'Epic Shirt': testTop,
-  'Epic Pants': testBottom
+  'invName': '',
+  'src': '#'
 }
 
 function App() {
   // state of which mian window components ('larval' | 'shoppe') are rendered
   const [mainWindow, setMainWindow] = useState('larval')
   // state of the user's equipped items
-  const [equippedTop, setEquippedTop] = useState({'name': '', 'src':'#', 'alt':'top'})
-  const [equippedBottom, setEquippedBottom] = useState({'name': '', 'src':'#', 'alt':'bottom'})
-  // const [equippedHat, setEquippedHat] = useState({})
-  // const [equippedAccessory, setEquippedAccessory] = useState({})
-  // const [equippedShoes, setEquippedShoes] = useState({})
-  // const [equippedGloves, setEquippedGloves] = useState({})
-  // const [equippedScarf, setEquippedScarf] = useState({})
+  const [equippedTop, setEquippedTop] = useState(emptyItem)
+  const [equippedBottom, setEquippedBottom] = useState(emptyItem)
+  const [equippedHead, setEquippedHead] = useState(emptyItem)
+  const [equippedAccessories, setEquippedAccessories] = useState(emptyItem)
+  const [equippedShoes, setEquippedShoes] = useState(emptyItem)
+  const [equippedHands, setEquippedHands] = useState(emptyItem)
 
   // pass this function to the inventory window
   // handles when the user clicks the equip/unequip button for an item
@@ -47,18 +29,72 @@ function App() {
     const itemParent = button.parentElement
     const itemGParent = itemParent.parentElement
     const itemDesc = itemGParent.lastChild
-    const itemName = itemDesc.firstChild.textContent
-    const topToEquip = testInventory[itemName]
+    const itemName = itemDesc.firstChild.textContent // string containing item's name
+    const itemToEquip = findItemObject(itemName) // item object
+    console.log(itemToEquip)
+    const slot = itemToEquip.equipSlot.toLowerCase()
+    console.log(slot)
+    console.log('itemName', itemName)
+    console.log('equippedTop.invName', equippedTop.invName)
     // button toggles between equip and unequip
-    if (itemName !== equippedTop.name) {
-      setEquippedTop(topToEquip) 
-      button.textContent = 'Unequip'
-    } else {
-      setEquippedTop(emptyItem)
-      button.textContent = 'Equip'
+    if (slot === 'top') {
+      if (itemName !== equippedTop.invName) {
+        setEquippedTop(itemToEquip) 
+        button.textContent = 'Unequip'
+      } else {
+        setEquippedTop(emptyItem)
+        button.textContent = 'Equip'
+      }
+    } else if (slot === 'bottom') {
+      if (itemName !== equippedBottom.invName) {
+        setEquippedBottom(itemToEquip) 
+        button.textContent = 'Unequip'
+      } else {
+        setEquippedBottom(emptyItem)
+        button.textContent = 'Equip'
+      }
+    } else if (slot === 'head') {
+      if (itemName !== equippedHead.invName) {
+        setEquippedHead(itemToEquip) 
+        button.textContent = 'Unequip'
+      } else {
+        setEquippedHead(emptyItem)
+        button.textContent = 'Equip'
+      }
+    } else if (slot === 'shoes') {
+      if (itemName !== equippedShoes.invName) {
+        setEquippedShoes(itemToEquip) 
+        button.textContent = 'Unequip'
+      } else {
+        setEquippedShoes(emptyItem)
+        button.textContent = 'Equip'
+      }
+    } else if (slot === 'hands') {
+      if (itemName !== equippedHands.invName) {
+        setEquippedHands(itemToEquip) 
+        button.textContent = 'Unequip'
+      } else {
+        setEquippedHands(emptyItem)
+        button.textContent = 'Equip'
+      }
+    } else if (slot === 'accessories') {
+      if (itemName !== equippedAccessories.invName) {
+        setEquippedAccessories(itemToEquip) 
+        button.textContent = 'Unequip'
+      } else {
+        setEquippedAccessories(emptyItem)
+        button.textContent = 'Equip'
+      }
     }
-    console.log('button clicked')
-    // setEquippedBottom(testBottom)
+    
+  }
+
+  // takes string containing inventory name of item, returns json object of item with that name
+  function findItemObject(itemName) {
+    const item = Object.keys(Inventory).find(index => {
+      return Inventory[index].invName === itemName
+    })
+    return Inventory[item]
   }
 
   // pass this function to the larval window, 
@@ -88,7 +124,14 @@ function App() {
       /> }
       
       {/* display the character window at all times */}
-      <CharacterWindow props={ {'top': equippedTop, 'bottom': equippedBottom} } /> {/*should contain all of the item slots*/}
+      <CharacterWindow props={ {
+        'top': equippedTop, 
+        'bottom': equippedBottom, 
+        'head': equippedHead, 
+        'hands': equippedHands, 
+        'shoes': equippedShoes, 
+        'accessories': equippedAccessories
+      } } /> {/*should contain all of the item slots*/}
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import './InventoryWindow.css'
 import MenuWindow from './MenuWindow'
 import Item from './Item'
+import Foo from './Foo'
 import React, { useState } from 'react'
-import Papa from "papaparse" 
 import Inventory from './assets/inventory.json'
 
 function InventoryWindow({ handleEquipButton, handleLarvalButton }) {
@@ -42,7 +42,10 @@ function InventoryWindow({ handleEquipButton, handleLarvalButton }) {
       {/* handleMenuButton is a function that toggles a bool that corresponds to display of menuWindow 
           displayMenu is the bool that corresponds to the display of menuWindow
           handleLarvalButton is a function that changes the state of the main window to 'larval' (switches main window component to CharacterSelectionWindow component) */}
+      
       <MenuWindow props={displayMenu} handleMenuButton={ handleMenuButton } handleLarvalButton={ handleLarvalButton }/>
+      
+      <Foo />
     </>
   );
 }
