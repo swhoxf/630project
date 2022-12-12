@@ -61,7 +61,7 @@ function App() {
         setEquippedHead(emptyItem)
         button.textContent = 'Equip'
       }
-    } else if (slot === 'shoes') {
+    } else if (slot === 'feet') {
       if (itemName !== equippedShoes.invName) {
         setEquippedShoes(itemToEquip) 
         button.textContent = 'Unequip'
@@ -77,7 +77,7 @@ function App() {
         setEquippedHands(emptyItem)
         button.textContent = 'Equip'
       }
-    } else if (slot === 'accessories') {
+    } else if (slot === 'accessory') {
       if (itemName !== equippedAccessories.invName) {
         setEquippedAccessories(itemToEquip) 
         button.textContent = 'Unequip'
