@@ -101,7 +101,7 @@ function calcMenuDisplay(showDrawer) {
             <tbody>
                 {/* ROW 1: BASE DETAILS AND BAR GRAPH*/}
                 <tr>
-                    <td className='oneThird'>
+                    <td className='oneHalf'>
                         <table width="100%">
                             <tbody>
                                 {/* ROW 1A: ITEM NAME*/}
@@ -122,19 +122,8 @@ function calcMenuDisplay(showDrawer) {
                                     <td className='oneHalf'><a href={testItem.axShopURL}>To AliExpress</a></td>
                                 </tr>
                             </tbody>
-                        </table>                    
-                    </td>
+                        </table>
 
-                    <td className='twoThird'>
-                        <div class="chart-container">
-                            <canvas id="bar-chart" label="A bar chart showing item stats" role="img"></canvas>
-                        </div>
-                    </td> 
-                </tr>
-
-                {/* ROW 2: STATS AND FLAVORTEXT*/}
-                <tr>
-                    <td className='oneThird'>
                         <table width="100%">
                             <tbody>
                                 {/* ROW 2A: STAT NAMES*/}
@@ -173,9 +162,17 @@ function calcMenuDisplay(showDrawer) {
                                     <td>{testItem.Aud}</td>
                                 </tr>
                             </tbody>
-                        </table>  
+                        </table>                    
                     </td>
-                    <td className='twoThird'>{testItem.Flavortext}</td>                    
+
+                    <td className='oneHalf'>
+                        <td>{testItem.Flavortext}</td>
+                        {/*
+                        <div class="chart-container">
+                            <canvas id="bar-chart" label="A bar chart showing item stats" role="img"></canvas>
+                        </div>
+                        */}
+                    </td> 
                 </tr>
             </tbody>
         </table>
