@@ -57,6 +57,7 @@ function App() {
       setEquippedTop(emptyItem)
       button.textContent = 'Equip'
     }
+    console.log('button clicked')
     // setEquippedBottom(testBottom)
   }
 
