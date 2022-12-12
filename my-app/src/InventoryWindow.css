@@ -18,6 +18,10 @@
   padding: 8px 16px;
 }
 
+.drawerButton {
+  padding: 8px 16px;
+}
+
 .minimizeButton {
   height: 100vh;
   padding: 8px;
