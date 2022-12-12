@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/630project/static/css/main.d72211ea.css",
-    "main.js": "/630project/static/js/main.2e3f1afd.js",
+    "main.js": "/630project/static/js/main.33dd7170.js",
     "static/js/787.28cb0dcd.chunk.js": "/630project/static/js/787.28cb0dcd.chunk.js",
     "static/media/wooden-textured-background.jpg": "/630project/static/media/wooden-textured-background.9f50b21ad02ff4b31fe6.jpg",
     "static/media/texture-background.jpg": "/630project/static/media/texture-background.a447ae4c6a760e4a6738.jpg",
@@ -10,11 +10,11 @@
     "static/media/mannequin.svg": "/630project/static/media/mannequin.1269bf43b120388fbe151f32656f86da.svg",
     "index.html": "/630project/index.html",
     "main.d72211ea.css.map": "/630project/static/css/main.d72211ea.css.map",
-    "main.2e3f1afd.js.map": "/630project/static/js/main.2e3f1afd.js.map",
+    "main.33dd7170.js.map": "/630project/static/js/main.33dd7170.js.map",
     "787.28cb0dcd.chunk.js.map": "/630project/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d72211ea.css",
-    "static/js/main.2e3f1afd.js"
+    "static/js/main.33dd7170.js"
   ]
 }
