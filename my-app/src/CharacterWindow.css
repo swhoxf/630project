@@ -37,6 +37,16 @@
   object-fit: contain;
   display: none;
   top: 0px;
+  left: 15px;
+  height: 100%;
+  width: 100%;
+}
+
+.handsImage, .shoesImage, .accessoriesImage {
+  position: absolute;
+  object-fit: contain;
+  display: none;
+  top: 0px;
   left: 0px;
   height: 100%;
   width: 100%;
