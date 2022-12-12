@@ -28,12 +28,12 @@ function CharacterWindow({ props }) {
         {/* images of equipped items 
             calcImageVisibility is a function that takes item as an argument and 
             sets the equipped item in that slot to the item */}
-        <img className='topImage' src={ top.mementoURL } alt={ top.invName } style={ calcImageVisibility(top) } />
-        <img className='bottomImage' src={ bottom.mementoURL } alt={ bottom.invName } style={ calcImageVisibility(bottom) } />
-        <img className='headImage' src={ head.mementoURL } alt={ head.invName } style={ calcImageVisibility(head) } />
-        <img className='shoesImage' src={ shoes.mementoURL } alt={ shoes.invName } style={ calcImageVisibility(shoes) } />
-        <img className='handsImage' src={ hands.mementoURL } alt={ hands.invName } style={ calcImageVisibility(hands) } />
-        <img className='accessoriesImage' src={ accessories.mementoURL } alt={ accessories.invName } style={ calcImageVisibility(accessories) } />
+        <img className='topImage' src={ top.drawURL } alt={ top.invName } style={ calcImageVisibility(top) } />
+        <img className='bottomImage' src={ bottom.drawURL } alt={ bottom.invName } style={ calcImageVisibility(bottom) } />
+        <img className='headImage' src={ head.drawURL } alt={ head.invName } style={ calcImageVisibility(head) } />
+        <img className='shoesImage' src={ shoes.drawURL } alt={ shoes.invName } style={ calcImageVisibility(shoes) } />
+        <img className='handsImage' src={ hands.drawURL } alt={ hands.invName } style={ calcImageVisibility(hands) } />
+        <img className='accessoriesImage' src={ accessories.drawURL } alt={ accessories.invName } style={ calcImageVisibility(accessories) } />
       </div>
       
       <div className="informationBox">
