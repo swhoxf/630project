@@ -56,7 +56,7 @@ function InventoryWindow({ handleEquipButton, handleLarvalButton }) {
       {/* handleDrawerButton is a function that toggles a bool that corresponds to display of ItemDrawer 
           displayDrawer is the bool that corresponds to the display of ItemDrawer
           handleLarvalButton is a function that changes the state of the main window to 'larval' (switches main window component to CharacterSelectionWindow component) */}
-      <ItemDrawer props={displayDrawer} handleDrawerButton={ handleDrawerButton } handleLarvalButton={ handleLarvalButton } />
+      <ItemDrawer props={displayDrawer} handleDrawerButton={ handleDrawerButton } />
       
       <Foo />
     </>

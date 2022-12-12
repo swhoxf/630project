@@ -42,49 +42,61 @@ function App() {
     if (slot === 'top') {
       if (itemName !== equippedTop.invName) {
         setEquippedTop(itemToEquip) 
+        applyItemStatChanges(itemToEquip)
         button.textContent = 'Unequip'
       } else {
         setEquippedTop(emptyItem)
+        removeItemStatChanges(itemToEquip)
         button.textContent = 'Equip'
       }
     } else if (slot === 'bottom') {
       if (itemName !== equippedBottom.invName) {
         setEquippedBottom(itemToEquip) 
+        applyItemStatChanges(itemToEquip)
         button.textContent = 'Unequip'
       } else {
         setEquippedBottom(emptyItem)
+        removeItemStatChanges(itemToEquip)
         button.textContent = 'Equip'
       }
     } else if (slot === 'head') {
       if (itemName !== equippedHead.invName) {
         setEquippedHead(itemToEquip) 
+        applyItemStatChanges(itemToEquip)
         button.textContent = 'Unequip'
       } else {
         setEquippedHead(emptyItem)
+        removeItemStatChanges(itemToEquip)
         button.textContent = 'Equip'
       }
     } else if (slot === 'feet') {
       if (itemName !== equippedShoes.invName) {
         setEquippedShoes(itemToEquip) 
+        applyItemStatChanges(itemToEquip)
         button.textContent = 'Unequip'
       } else {
         setEquippedShoes(emptyItem)
+        removeItemStatChanges(itemToEquip)
         button.textContent = 'Equip'
       }
     } else if (slot === 'hands') {
       if (itemName !== equippedHands.invName) {
         setEquippedHands(itemToEquip) 
+        applyItemStatChanges(itemToEquip)
         button.textContent = 'Unequip'
       } else {
         setEquippedHands(emptyItem)
+        removeItemStatChanges(itemToEquip)
         button.textContent = 'Equip'
       }
     } else if (slot === 'accessory') {
       if (itemName !== equippedAccessories.invName) {
         setEquippedAccessories(itemToEquip) 
+        applyItemStatChanges(itemToEquip)
         button.textContent = 'Unequip'
       } else {
         setEquippedAccessories(emptyItem)
+        removeItemStatChanges(itemToEquip)
         button.textContent = 'Equip'
       }
     }
@@ -125,8 +137,24 @@ function App() {
     })
   }
 
-  function handleCharStatChange(item) {
-    
+  function applyItemStatChanges(item) {
+    handleItemStatChanges([item.Str, item.Dex, item.Con, item.Int, item.Wis, item.Cha, item.Aud])
+  }
+
+  function removeItemStatChanges(item) {
+    handleItemStatChanges([-item.Str, -item.Dex, -item.Con, -item.Int, -item.Wis, -item.Cha, -item.Aud])
+  }
+
+  function handleItemStatChanges(array) {
+    setCharacterStats({
+      'strength': characterStats.strength + array[0], 
+      'dexterity': characterStats.dexterity + array[1],
+      'constitution': characterStats.constitution + array[2],
+      'intelligence': characterStats.intelligence + array[3],
+      'wisdom': characterStats.wisdom + array[4],
+      'charisma': characterStats.charisma + array[5],
+      'audacity': characterStats.audacity + array[6]
+    })
   }
 
   return (

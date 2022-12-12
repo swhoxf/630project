@@ -1,7 +1,7 @@
 import './itemDrawer.css'
 import Chart from 'chart.js/auto'
 
-function ItemDrawer( { props, handleDrawerButton, handleLarvalButton } ) {
+function ItemDrawer( { props, handleDrawerButton } ) {
   // boolean that corresponds to the display ('block' | 'none') of the menuWindow
   const displayDrawer = props
 
@@ -60,19 +60,19 @@ function calcMenuDisplay(showDrawer) {
 
 //const bar = document.getElementById('bar-chart');
 
-{/*const barChart = new Chart(bar, {
-    type: 'bar', // make it a bar chart
-    data: {
-        labels: statNames, // use the array of continents as labels
-        datasets: [{
-            label: 'Item Stats',
-            data: stats, // use the array of populations to draw bars
-            backgroundColor: 'rgba(255, 255, 0, 0.2)',
-            borderColor: 'rgba(255, 0, 255, 1)',
-            borderWidth: 1 // set the border width to 1 pixel
-        }]
-    }
-}); */}
+// const barChart = new Chart(bar, {
+//     type: 'bar', // make it a bar chart
+//     data: {
+//         labels: statNames, // use the array of continents as labels
+//         datasets: [{
+//             label: 'Item Stats',
+//             data: stats, // use the array of populations to draw bars
+//             backgroundColor: 'rgba(255, 255, 0, 0.2)',
+//             borderColor: 'rgba(255, 0, 255, 1)',
+//             borderWidth: 1 // set the border width to 1 pixel
+//         }]
+//     }
+// }); 
 
   return (
     // calcMenuDisplay is a function that toggles the bool corresponding to the display ('block' | 'none') of the menuWindow
@@ -82,13 +82,8 @@ function calcMenuDisplay(showDrawer) {
         <table width="100%">
             <tbody>
                 <tr>
-                    <td className="oneThird">
-                        {/* handleLarvalButton is a function that changes mainWindow state to 'larval', swaps main window component to CharacterSelectWindow */}
-                        <div className='menuLink' onClick={ handleLarvalButton } >
-                            <h3>Larval Stage</h3>
-                        </div>
-                    </td>
                     <td className="oneThird"><button className='custom-btn btn-1 drawerButton' right="0">fake equip</button></td>
+                    <td className="oneThird"></td>
                     <td className="oneThird"><button className='custom-btn btn-1 drawerButton' onClick={ handleDrawerButton } right="50%">X</button></td>
                 </tr>
             </tbody>
