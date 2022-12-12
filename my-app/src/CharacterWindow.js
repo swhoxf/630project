@@ -10,6 +10,7 @@ function CharacterWindow({ props }) {
   const shoes = props.shoes
   const hands = props.hands
   const accessories = props.accessories
+  const characterStats = props.characterStats
 
   // function that toggles visibility of equipped item in CharacterWindow 
   function calcImageVisibility(item) {
@@ -51,13 +52,13 @@ function CharacterWindow({ props }) {
 
               {/* ROW 2B: STAT VALUES*/}
               <tr>
-                <td>10</td>
-                <td>10</td>
-                <td>10</td>
-                <td>10</td>
-                <td>10</td>
-                <td>10</td>
-                <td>10</td>
+                <td>{ characterStats.strength }</td>
+                <td>{ characterStats.dexterity }</td>
+                <td>{ characterStats.constitution }</td>
+                <td>{ characterStats.intelligence }</td>
+                <td>{ characterStats.wisdom }</td>
+                <td>{ characterStats.charisma }</td>
+                <td>{ characterStats.audacity }</td>
               </tr>
             </tbody>
           </table>

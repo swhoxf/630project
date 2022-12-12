@@ -1,7 +1,7 @@
 import './CharacterSelectWindow.css'
 
 
-function CharacterSelectWindow( { handleShoppingButton } ) {
+function CharacterSelectWindow( { handleShoppingButton, handleCharStats } ) {
   const character = {
     "Name": "",
     "Pronouns": "",
@@ -51,12 +51,13 @@ function CharacterSelectWindow( { handleShoppingButton } ) {
       finalStats[i] = baseStats[i] + charStats[i];
     }
     
-    alert(
-      "Name: " + charName + "\n" + 
-      "Pronouns: " + charPronouns + "\n" + 
-      "Base Stats: " + baseStats + "\n" + 
-      "Char Stats: " + charStats + "\n" + 
-      "Final Stats: " + finalStats)
+    // alert(
+    //   "Name: " + charName + "\n" + 
+    //   "Pronouns: " + charPronouns + "\n" + 
+    //   "Base Stats: " + baseStats + "\n" + 
+    //   "Char Stats: " + charStats + "\n" + 
+    //   "Final Stats: " + finalStats)
+    handleCharStats(finalStats)
   }
 
   return (
