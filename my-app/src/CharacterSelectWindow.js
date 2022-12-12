@@ -140,7 +140,7 @@ function CharacterSelectWindow( { handleShoppingButton } ) {
                             <option value="12">12</option>
                             <option value="11">11</option>
                             <option value="10">10</option>
-                            <option value="8" selected>8</option>
+                            <option value="8" selected="true">8</option>
                           </select>
                         </td>
                         <td>
@@ -148,7 +148,7 @@ function CharacterSelectWindow( { handleShoppingButton } ) {
                             <option value="0">---</option>
                             <option value="0">0</option>
                             <option value="1">1</option>
-                            <option value="2" selected>2</option>
+                            <option value="2" selected="true">2</option>
                           </select>
                         </td>
                         <td>Physical; muscle, power, and might.</td>
@@ -164,7 +164,7 @@ function CharacterSelectWindow( { handleShoppingButton } ) {
                             <option value="15">15</option>
                             <option value="14">14</option>
                             <option value="13">13</option>
-                            <option value="12" selected>12</option>
+                            <option value="12" selected="true">12</option>
                             <option value="11">11</option>
                             <option value="10">10</option>
                             <option value="8">8</option>
@@ -173,7 +173,7 @@ function CharacterSelectWindow( { handleShoppingButton } ) {
                         <td>
                           <select name="dexBonus" id="dropdownMenu">
                             <option value="0">---</option>
-                            <option value="0" selected>0</option>
+                            <option value="0" selected="true">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                           </select>
@@ -190,7 +190,7 @@ function CharacterSelectWindow( { handleShoppingButton } ) {
                             <option value="10">---</option>
                             <option value="15">15</option>
                             <option value="14">14</option>
-                            <option value="13" selected>13</option>
+                            <option value="13" selected="true">13</option>
                             <option value="12">12</option>
                             <option value="11">11</option>
                             <option value="10">10</option>
@@ -200,7 +200,7 @@ function CharacterSelectWindow( { handleShoppingButton } ) {
                         <td>
                           <select name="conBonus" id="dropdownMenu">
                             <option value="0">---</option>
-                            <option value="0" selected>0</option>
+                            <option value="0" selected="true">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                           </select>
@@ -220,14 +220,14 @@ function CharacterSelectWindow( { handleShoppingButton } ) {
                             <option value="13">13</option>
                             <option value="12">12</option>
                             <option value="11">11</option>
-                            <option value="10" selected>10</option>
+                            <option value="10" selected="true">10</option>
                             <option value="8">8</option>
                           </select>
                         </td>
                         <td>
                           <select name="intBonus" id="dropdownMenu">
                             <option value="0">---</option>
-                            <option value="0" selected>0</option>
+                            <option value="0" selected="true">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                           </select>
@@ -246,7 +246,7 @@ function CharacterSelectWindow( { handleShoppingButton } ) {
                             <option value="14">14</option>
                             <option value="13">13</option>
                             <option value="12">12</option>
-                            <option value="11" selected>11</option>
+                            <option value="11" selected="true">11</option>
                             <option value="10">10</option>
                             <option value="8">8</option>
                           </select>
@@ -254,7 +254,7 @@ function CharacterSelectWindow( { handleShoppingButton } ) {
                         <td>
                           <select name="wisBonus" id="dropdownMenu">
                             <option value="0">---</option>
-                            <option value="0" selected>0</option>
+                            <option value="0" selected="true">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                           </select>
@@ -270,7 +270,7 @@ function CharacterSelectWindow( { handleShoppingButton } ) {
                           <select name="chaSelect" id="dropdownMenu">
                             <option value="10">---</option>
                             <option value="15">15</option>
-                            <option value="14" selected>14</option>
+                            <option value="14" selected="true">14</option>
                             <option value="13">13</option>
                             <option value="12">12</option>
                             <option value="11">11</option>
@@ -282,7 +282,7 @@ function CharacterSelectWindow( { handleShoppingButton } ) {
                           <select name="chaBonus" id="dropdownMenu">
                             <option value="0">---</option>
                             <option value="0">0</option>
-                            <option value="1" selected>1</option>
+                            <option value="1" selected="true">1</option>
                             <option value="2">2</option>
                           </select>
                         </td>
@@ -296,7 +296,7 @@ function CharacterSelectWindow( { handleShoppingButton } ) {
                         <td>
                           <select name="audSelect" id="dropdownMenu">
                             <option value="10">---</option>
-                            <option value="15" selected>15</option>
+                            <option value="15" selected="true">15</option>
                             <option value="14">14</option>
                             <option value="13">13</option>
                             <option value="12">12</option>
@@ -308,7 +308,7 @@ function CharacterSelectWindow( { handleShoppingButton } ) {
                         <td>
                           <select name="audBonus" id="dropdownMenu">
                             <option value="0">---</option>
-                            <option value="0" selected>0</option>
+                            <option value="0" selected="true">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                           </select>

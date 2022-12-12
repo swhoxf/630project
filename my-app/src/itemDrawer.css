@@ -1,0 +1,51 @@
+
+
+.itemDrawer {
+    height: 40vh;
+    width: 75%;
+    box-shadow: 0px 0px 24px black;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    /* display: none; */
+    transform-origin: bottom right;
+    transform: rotate3d(1, 0, 0, 90deg);
+    transition: transform 250ms ease-in-out;
+    background-image: url('./assets/grunge-vintage-old-paper-background.jpg');
+    /* <a href="https://www.freepik.com/free-photo/grunge-vintage-old-paper-background_1273370.htm#query=old%20paper&position=4&from_view=keyword">Image by aopsan</a> on Freepik */
+  }
+
+  .itemDeets {
+    width: 100%;
+  }
+
+  .itemDeets td {
+    border: 1px solid;
+  }
+
+  .oneThird {
+    width: 34%;
+  }
+
+  .twoThird {
+    width: 66%;
+  }
+
+  .oneHalf {
+    width: 50%;
+  }
+  
+  .drawerLink:hover {
+    text-shadow: 0px 0px 8px rgb(81, 45, 45);
+    color: white;
+    cursor: pointer;
+  }
+
+  .chart-container {
+    position: relative;
+    height: 33%;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }

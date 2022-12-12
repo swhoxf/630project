@@ -1,15 +1,22 @@
 import './InventoryWindow.css'
 import MenuWindow from './MenuWindow'
+import ItemDrawer from './itemDrawer'
 import React, { useState } from 'react'
 
 function InventoryWindow({ handleEquipButton, handleLarvalButton }) {
 
-  // boolean; true: menu display block | false: menu display none
+  // boolean; true: menu/drawer display block | false: menu/drawer display none
   const [displayMenu, setDisplayMenu] = useState(false)
+  const [displayDrawer, setDisplayDrawer] = useState(false)
 
   // toggles boolean corresponding to menuWindow display between block and none
   function handleMenuButton(event) {
     setDisplayMenu(!displayMenu)
+  }
+
+  // toggles boolean corresponding to menuWindow display between block and none
+  function handleDrawerButton(event) {
+    setDisplayDrawer(!displayDrawer)
   }
 
   return (
@@ -20,6 +27,7 @@ function InventoryWindow({ handleEquipButton, handleLarvalButton }) {
             <h1>Ye Olde Shoppe</h1>
             {/* handleMenuButton toggles a bool that corresponds to display of menuWindow */}
             <button className='custom-btn btn-1 menuButton' onClick={ handleMenuButton }>=</button>
+            <button classname='custom-btn btn-1 drawerButton' onClick={ handleDrawerButton }>==</button>
           </div>
           <div className='galleryContainer'>
             <div className='gallery'>
@@ -48,7 +56,12 @@ function InventoryWindow({ handleEquipButton, handleLarvalButton }) {
       {/* handleMenuButton is a function that toggles a bool that corresponds to display of menuWindow 
           displayMenu is the bool that corresponds to the display of menuWindow
           handleLarvalButton is a function that changes the state of the main window to 'larval' (switches main window component to CharacterSelectionWindow component) */}
-      <MenuWindow props={displayMenu} handleMenuButton={ handleMenuButton } handleLarvalButton={ handleLarvalButton }/>
+      <MenuWindow props={displayMenu} handleMenuButton={ handleMenuButton } handleLarvalButton={ handleLarvalButton } handleDrawerButton={ handleDrawerButton }/>
+
+      {/* handleDrawerButton is a function that toggles a bool that corresponds to display of ItemDrawer 
+          displayDrawer is the bool that corresponds to the display of ItemDrawer
+          handleLarvalButton is a function that changes the state of the main window to 'larval' (switches main window component to CharacterSelectionWindow component) */}
+      <ItemDrawer props={displayDrawer} handleDrawerButton={ handleDrawerButton } handleLarvalButton={ handleLarvalButton } />
     </>
   );
 }
